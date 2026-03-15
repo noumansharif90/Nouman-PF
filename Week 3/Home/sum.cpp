@@ -7,7 +7,7 @@ int main()
 
 
     int number;
-    int sum;
+    int sum = 0;
     cout << "Enter 5 integers: " <<endl;
 
     cin>>number;
