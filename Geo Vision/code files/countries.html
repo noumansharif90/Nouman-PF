@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GeoVision | Countries</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
+        <div class="logo">GeoVision</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="countries.html" class="active">Countries</a></li>
+            <li><a href="conflicts.html">Conflicts</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="military.html">Military</a></li>
+            <li><a href="economy.html">Economy</a></li>
+            <li><a href="organizations.html">Organizations</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="page-hero">
+    <h1>Explore Countries</h1>
+    <p>Discover geopolitical profiles of nations around the world</p>
+</section>
+
+<!-- ================= SEARCH + FILTER ================= -->
+<section class="controls">
+
+    <input type="text" id="searchInput" placeholder="Search country...">
+
+    <div class="filters">
+        <button class="filter-btn active" data-region="all">All</button>
+        <button class="filter-btn" data-region="asia">Asia</button>
+        <button class="filter-btn" data-region="europe">Europe</button>
+        <button class="filter-btn" data-region="africa">Africa</button>
+        <button class="filter-btn" data-region="americas">Americas</button>
+        <button class="filter-btn" data-region="oceania">Oceania</button>
+    </div>
+
+</section>
+
+<!-- ================= COUNTRIES GRID ================= -->
+<section class="countries">
+
+    <div class="country-grid">
+
+        <!-- Pakistan -->
+        <div class="country-card" data-region="asia">
+            <div class="flag">🇵🇰</div>
+            <h3>Pakistan</h3>
+            <p>Capital: Islamabad</p>
+            <p>Population: 240M</p>
+            <a href="pakistan.html">
+            <button>View Details</button> </a>
+        </div>
+
+        <!-- India -->
+        <div class="country-card" data-region="asia">
+            <div class="flag">🇮🇳</div>
+            <h3>India</h3>
+            <p>Capital: New Delhi</p>
+            <p>Population: 1.4B</p>
+            <a href="india.html"><button>View Details</button> </a>
+        </div>
+
+        <!-- USA -->
+        <div class="country-card" data-region="americas">
+            <div class="flag">🇺🇸</div>
+            <h3>United States</h3>
+            <p>Capital: Washington D.C.</p>
+            <p>Population: 330M</p>
+            <button>View Details</button>
+        </div>
+
+        <!-- China -->
+        <div class="country-card" data-region="asia">
+            <div class="flag">🇨🇳</div>
+            <h3>China</h3>
+            <p>Capital: Beijing</p>
+            <p>Population: 1.4B</p>
+            <button>View Details</button>
+        </div>
+
+        <!-- UK -->
+        <div class="country-card" data-region="europe">
+            <div class="flag">🇬🇧</div>
+            <h3>United Kingdom</h3>
+            <p>Capital: London</p>
+            <p>Population: 67M</p>
+            <button>View Details</button>
+        </div>
+
+        <!-- Germany -->
+        <div class="country-card" data-region="europe">
+            <div class="flag">🇩🇪</div>
+            <h3>Germany</h3>
+            <p>Capital: Berlin</p>
+            <p>Population: 83M</p>
+            <button>View Details</button>
+        </div>
+
+        <!-- Russia -->
+        <div class="country-card" data-region="europe">
+            <div class="flag">🇷🇺</div>
+            <h3>Russia</h3>
+            <p>Capital: Moscow</p>
+            <p>Population: 144M</p>
+            <button>View Details</button>
+        </div>
+
+        <!-- Brazil -->
+        <div class="country-card" data-region="americas">
+            <div class="flag">🇧🇷</div>
+            <h3>Brazil</h3>
+            <p>Capital: Brasília</p>
+            <p>Population: 215M</p>
+            <button>View Details</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 GeoVision | Countries Intelligence System</p>
+    </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="main.js"></script>
+
+<!-- ================= PAGE SCRIPT ================= -->
+<script>
+/* ===== SEARCH FUNCTION ===== */
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".country-card");
+
+searchInput.addEventListener("input", function () {
+    const value = this.value.toLowerCase();
+
+    cards.forEach(card => {
+        const name = card.querySelector("h3").innerText.toLowerCase();
+
+        if (name.includes(value)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+/* ===== FILTER FUNCTION ===== */
+const filterBtns = document.querySelectorAll(".filter-btn");
+
+filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const region = btn.getAttribute("data-region");
+
+        cards.forEach(card => {
+            if (region === "all" || card.dataset.region === region) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+    });
+});
+</script>
+
+</body>
+</html>

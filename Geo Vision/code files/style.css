@@ -1,0 +1,1662 @@
+/* =========================
+   GEOVISION GLOBAL STYLE
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b132b;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ================= LOADER ================= */
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0b132b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader h2 {
+    margin-top: 20px;
+    letter-spacing: 3px;
+    color: #00d4ff;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255,255,255,0.1);
+    border-top: 5px solid #00d4ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    background: #111a33;
+    padding: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(11, 19, 43, 0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #00d4ff;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background: radial-gradient(circle at center, #162447, #0b132b);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #00d4ff;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #00d4ff;
+    color: #000;
+}
+
+.secondary {
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================= GLOBE ================= */
+
+.hero-globe {
+    width: 300px;
+    height: 300px;
+}
+
+.globe {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+    background-size: cover;
+    animation: rotate 20s linear infinite;
+    box-shadow: 0 0 40px #00d4ff;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+/* ================= TICKER ================= */
+
+.ticker {
+    background: #111a33;
+    padding: 10px;
+    color: #00d4ff;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 40px;
+    color: #00d4ff;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.feature-card i {
+    font-size: 30px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 60px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-img {
+    width: 40%;
+}
+
+.world-map {
+    width: 100%;
+    height: 300px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+    background-size: cover;
+    opacity: 0.7;
+}
+
+/* ================= CONFLICTS ================= */
+
+.conflicts {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.conflict-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.conflict-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.conflict-card:hover {
+    transform: scale(1.05);
+    background: rgba(0,212,255,0.1);
+}
+
+/* ================= ORGANIZATIONS ================= */
+
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.org-grid div {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.org-grid div:hover {
+    background: #00d4ff;
+    color: #000;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+    padding: 80px 40px;
+    text-align: center;
+    background: #111a33;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: #00d4ff;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #0a0f1f;
+    padding: 50px 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content h4 {
+    color: #00d4ff;
+}
+
+.footer-content a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+/* ================= COUNTRIES PAGE ================= */
+
+.page-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle at center, #162447, #0b132b);
+}
+
+.page-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.page-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ================= CONTROLS ================= */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.controls input {
+    padding: 10px 15px;
+    width: 250px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* ================= FILTER BUTTONS ================= */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border: 1px solid #00d4ff;
+    background: transparent;
+    color: #00d4ff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #00d4ff;
+    color: #000;
+}
+
+/* ================= COUNTRY GRID ================= */
+
+.countries {
+    padding: 40px;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* ================= COUNTRY CARD ================= */
+
+.country-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.country-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.2);
+}
+
+.country-card .flag {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.country-card h3 {
+    color: #00d4ff;
+}
+
+.country-card p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.country-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #00d4ff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.country-card button:hover {
+    background: #00aacc;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .country-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+/* ================= CONFLICTS PAGE (NEWS / YOUTUBE STYLE) ================= */
+
+.conflict-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.conflict-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.conflict-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* GRID */
+.conflict-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* CARD */
+.conflict-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.conflict-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* THUMBNAIL (YouTube STYLE) */
+.thumbnail {
+    height: 160px;
+    background: linear-gradient(45deg, #1c2541, #0b132b);
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* CONTENT */
+.conflict-content {
+    padding: 15px;
+}
+
+.conflict-content h3 {
+    color: #00d4ff;
+    font-size: 18px;
+}
+
+.conflict-content p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.conflict-content span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .conflict-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= LEADERS PAGE ================= */
+
+.leader-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.leader-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.leader-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* GRID */
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* CARD */
+.leader-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+.avatar {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.leader-card h3 {
+    color: #00d4ff;
+    font-size: 16px;
+}
+
+.leader-card p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.leader-card span {
+    font-size: 12px;
+    color: #888;
+}
+/* ================= MILITARY PAGE ================= */
+
+.military-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.military-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.military-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ================= RANKING ================= */
+
+.military-ranking {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rank-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.rank-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.2);
+}
+
+.rank-card h2 {
+    color: #00d4ff;
+}
+
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #1c2541;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #00d4ff;
+}
+
+/* ================= BRANCHES ================= */
+
+.branches {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.branch-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.branch-card i {
+    font-size: 30px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* ================= COMPARISON ================= */
+
+.compare {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.compare-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.compare-card:hover {
+    background: rgba(0,212,255,0.1);
+    transform: scale(1.05);
+}
+
+/* ================= INSIGHT ================= */
+
+.military-insight {
+    padding: 60px 40px;
+}
+
+.insight-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+/* ================= ECONOMY PAGE ================= */
+
+.economy-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.economy-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.economy-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ================= KPI ================= */
+
+.economy-kpi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.kpi-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.kpi-card i {
+    font-size: 30px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.kpi-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* ================= GDP ================= */
+
+.gdp-section {
+    padding: 40px;
+}
+
+.gdp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gdp-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.gdp-card h3 {
+    color: #00d4ff;
+}
+
+/* BAR */
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #1c2541;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #00d4ff;
+}
+
+/* ================= INDICATORS ================= */
+
+.indicators {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.indicator-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.indicator-card:hover {
+    transform: scale(1.05);
+    background: rgba(0,212,255,0.1);
+}
+
+/* ================= REGIONS ================= */
+
+.regions {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.region-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.region-card:hover {
+    background: #00d4ff;
+    color: #000;
+}
+
+/* ================= INSIGHT ================= */
+
+.eco-insight {
+    padding: 60px 40px;
+}
+
+.insight-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+/* ================= ORGANIZATIONS PAGE (UNIQUE NETWORK STYLE) ================= */
+
+.org-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.org-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.org-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ================= NETWORK ================= */
+
+.network-view {
+    text-align: center;
+    padding: 40px;
+}
+
+.network-node {
+    display: inline-block;
+    padding: 20px 30px;
+    background: #00d4ff;
+    color: #000;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.network-line {
+    width: 2px;
+    height: 40px;
+    background: #00d4ff;
+    margin: 0 auto 20px;
+}
+
+/* ================= ORG GRID ================= */
+
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.org-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.org-card h3 {
+    color: #00d4ff;
+}
+
+.org-card span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* CATEGORY STYLES */
+.org-card.strong {
+    border: 1px solid #00d4ff;
+}
+
+.org-card.medium {
+    border: 1px solid #888;
+}
+
+.org-card.low {
+    border: 1px solid #444;
+}
+
+.org-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* ================= IMPACT ================= */
+
+.impact {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.impact-bars {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.impact-item {
+    margin-bottom: 20px;
+}
+
+.impact-item p {
+    margin-bottom: 5px;
+    color: #aaa;
+}
+/* ================= DASHBOARD PAGE ================= */
+
+.dash-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.dash-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.dash-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ================= STATS ================= */
+
+.dash-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stat-card i {
+    font-size: 30px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+/* ================= GLOBAL STATUS ================= */
+
+.global-status {
+    padding: 60px 40px;
+}
+
+.status-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.status-item {
+    margin-top: 15px;
+}
+
+.status-item span {
+    color: #aaa;
+}
+
+/* ================= QUICK NAV ================= */
+
+.quick-nav {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.nav-card {
+    display: block;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #00d4ff;
+    transition: 0.3s;
+}
+
+.nav-card:hover {
+    background: #00d4ff;
+    color: #000;
+}
+
+/* ================= FEED ================= */
+
+.activity {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.feed {
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
+}
+
+.feed-item {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feed-item span {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+.feed-item:hover {
+    transform: translateX(10px);
+}
+/* ================= PAKISTAN PAGE ================= */
+
+.pak-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.pak-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.pak-hero p {
+    color: #aaa;
+}
+
+/* FACTS */
+.pak-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.fact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-card h3 {
+    color: #00d4ff;
+}
+
+/* SECTIONS */
+.pak-section {
+    padding: 60px 40px;
+}
+
+.pak-section.dark {
+    background: rgba(255,255,255,0.03);
+}
+
+.text-box {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* GRID */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* MILITARY */
+.military-box {
+    display: grid;
+    gap: 10px;
+}
+
+.mil-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* CONFLICT */
+.conflict-list {
+    display: grid;
+    gap: 15px;
+}
+
+.conflict-item {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.conflict-item h3 {
+    color: #00d4ff;
+}
+/* ================= INDIA PAGE ================= */
+
+.india-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.india-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.india-hero p {
+    color: #aaa;
+}
+
+/* FACTS */
+.india-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.fact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-card h3 {
+    color: #00d4ff;
+}
+
+/* SECTIONS */
+.india-section {
+    padding: 60px 40px;
+}
+
+.india-section.dark {
+    background: rgba(255,255,255,0.03);
+}
+
+/* SAME UTILITIES (reused) */
+.text-box {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.military-box {
+    display: grid;
+    gap: 10px;
+}
+
+.mil-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.conflict-list {
+    display: grid;
+    gap: 15px;
+}
+
+.conflict-item {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.conflict-item h3 {
+    color: #00d4ff;
+}
+/* ================= USA PAGE ================= */
+
+.usa-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.usa-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.usa-hero p {
+    color: #aaa;
+}
+
+/* FACTS */
+.usa-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.fact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-card h3 {
+    color: #00d4ff;
+}
+
+/* SECTIONS */
+.usa-section {
+    padding: 60px 40px;
+}
+
+.usa-section.dark {
+    background: rgba(255,255,255,0.03);
+}
+
+/* UTILITIES (reuse same system) */
+.text-box {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.military-box {
+    display: grid;
+    gap: 10px;
+}
+
+.mil-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.conflict-list {
+    display: grid;
+    gap: 15px;
+}
+
+.conflict-item {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.conflict-item h3 {
+    color: #00d4ff;
+}
+/* ================= CHINA PAGE ================= */
+
+.china-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.china-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.china-hero p {
+    color: #aaa;
+}
+
+/* FACTS */
+.china-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.fact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-card h3 {
+    color: #00d4ff;
+}
+
+/* SECTIONS */
+.china-section {
+    padding: 60px 40px;
+}
+
+.china-section.dark {
+    background: rgba(255,255,255,0.03);
+}
+
+/* UTILITIES (reused system) */
+.text-box {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.military-box {
+    display: grid;
+    gap: 10px;
+}
+
+.mil-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.conflict-list {
+    display: grid;
+    gap: 15px;
+}
+
+.conflict-item {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.conflict-item h3 {
+    color: #00d4ff;
+}
+/* ================= RUSSIA PAGE ================= */
+
+.russia-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: radial-gradient(circle, #162447, #0b132b);
+}
+
+.russia-hero h1 {
+    font-size: 42px;
+    color: #00d4ff;
+}
+
+.russia-hero p {
+    color: #aaa;
+}
+
+/* FACTS */
+.russia-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.fact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-card h3 {
+    color: #00d4ff;
+}
+
+/* SECTIONS */
+.russia-section {
+    padding: 60px 40px;
+}
+
+.russia-section.dark {
+    background: rgba(255,255,255,0.03);
+}
+
+/* UTILITIES (reused system) */
+.text-box {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.military-box {
+    display: grid;
+    gap: 10px;
+}
+
+.mil-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.conflict-list {
+    display: grid;
+    gap: 15px;
+}
+
+.conflict-item {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.conflict-item h3 {
+    color: #00d4ff;
+}
